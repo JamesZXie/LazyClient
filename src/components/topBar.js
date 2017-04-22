@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './styles/topBar.css';
 
 class TopBar extends Component {
 constructor(props){
