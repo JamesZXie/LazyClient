@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './styles/topBar.css';
 
-class topBar extends Component {
+class TopBar extends Component {
   render() {
     return (
-      <div>YES</div>
+      <h1>I hate React</h1>
     );
   }
 }
 
-export default topBar;
+export default TopBar;

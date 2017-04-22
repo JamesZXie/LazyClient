@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import topBar from './components/topBar.js';
+import TopBar from './components/topBar.js';
 import './index.css';
 
 ReactDOM.render(
-  <topBar />,
+  <TopBar/>,
   document.getElementById('topBar')
 );
