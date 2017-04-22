@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 import './styles/topBar.css';
 
 class TopBar extends Component {
+constructor(props){
+  super(props)
+  this.state={
+    userName: "default",
+  }
+}  
+
   render() {
     return (
-      <h1>I hate React</h1>
+      <div>Error: TopBar has not been implemented yet</div>
     );
   }
 }
