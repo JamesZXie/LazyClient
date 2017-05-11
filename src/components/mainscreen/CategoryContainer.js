@@ -1,24 +1,44 @@
 import React, { Component } from 'react';
+import Category from './Category';
 
 class CategoryContainer extends Component {
 constructor(props){
   super(props)
   this.state={
-    allEmails: [{sender: "", subject: "", message:""}]
+    allEmails: [
+    [{sender: "James", subject: "Hi", message:"Hello World Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor Lorem Ipsum Dolor"},
+    {sender: "James", subject: "Hi2", message:"Hello World"},
+    {sender: "James", subject: "Hi3", message:"Hello World"},
+    {sender: "James", subject: "Hi4", message:"Hello World"},
+    {sender: "James", subject: "Hi5", message:"Hello World"}],
+    [{sender: "Jerry", subject: "No", message:"Hello World"},
+    {sender: "Jerry", subject: "No1", message:"Hello World"}],
+    [{sender: "Sherry", subject: "Yes", message:"Hello World"}]
+    ]
   }
 }  
 
-// takes this.state.allEmails and sorts it k arrays based on sender
-sortArray(){}  
-
   render() {
-    function parseArray(index){
-			return (<Category sender={index.sender} message={index.message} />);
+
+    function parseCategories(Email){
+			return (
+				<div>
+					<Category emails={Email} />
+					<br/>
+				</div>	
+			);
+	}
+
+	const divStyle = {
+		margin: 25,
+		width: 450,
 	}
 
     return (
-      <div>
-      	
+      <div style={{flex:1, alignItems: 'center'}}>
+	      <div style={divStyle}>
+	      	{this.state.allEmails.map(parseCategories)}
+	      </div>
       </div>
       /*
 		When isOpen is false, there are two states we can be in: isRead, or !isRead.
