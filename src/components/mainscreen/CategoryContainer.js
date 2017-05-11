@@ -35,11 +35,12 @@ constructor(props){
 	}
 
     return (
-      <div style={{flex:1, alignItems: 'center'}}>
+      <div style={{flex:1, alignItems: 'right'}}>
 	      <div style={divStyle}>
 	      	{this.state.allEmails.map(parseCategories)}
 	      </div>
       </div>
+      
       /*
 		When isOpen is false, there are two states we can be in: isRead, or !isRead.
 		When isOpen is true, isRead will not change.
