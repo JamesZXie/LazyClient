@@ -70,7 +70,7 @@ class CategoryItem extends Component {
         {
           return(
               <tr style={{color: 'WhiteSmoke', }}>
-                <td onClick={toggleIsRead} style={{...tdStyle, width:'5%'}}>{this.state.subject}</td>
+                <td onClick={toggleIsRead} style={{...tdStyle, width:'5%'}}>{this.state.subject.substr(0,16)}...</td>
                 <td onClick={toggleIsRead} style={{...tdStyle, width: '10%'}}>{this.state.message.substr(0,23)}...</td>
                 
                 <td style={{...tdStyle, width: '1%',textAlign: 'center',}}>
@@ -84,7 +84,7 @@ class CategoryItem extends Component {
         {
           return(  
               <tr>
-                <td onClick={toggleIsRead} style={{...tdStyle, width:'5%'}}>{this.state.subject}</td>
+                <td onClick={toggleIsRead} style={{...tdStyle, width:'5%'}}>{this.state.subject.substr(0,16)}...</td>
                 <td onClick={toggleIsRead} style={{...tdStyle, width: '10%'}}>{this.state.message.substr(0,23)}...</td>
                 
                 <td style={{...tdStyle, width: '1%',textAlign: 'center',}}>
